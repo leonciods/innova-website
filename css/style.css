@@ -1,0 +1,456 @@
+/* Reset e estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Botão primário */
+.btn-primary {
+    display: inline-block;
+    background-color: #55A630;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #55A630;
+}
+
+/* Barra superior */
+.top-bar {
+    background-color: #1C4D90;
+    color: white;
+    padding: 10px 0;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info span {
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+.contact-info i {
+    margin-right: 5px;
+}
+
+.social-icons a {
+    color: white;
+    margin-left: 15px;
+    font-size: 16px;
+}
+
+/* Cabeçalho principal */
+header {
+    background-color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+nav ul li a:not(.btn-primary):after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #1C4D90;
+    transition: width 0.3s;
+}
+
+nav ul li a:not(.btn-primary):hover:after {
+    width: 100%;
+}
+
+.dropdown i {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* Seção Hero */
+.hero {
+    background-image: url('../images/sala.png');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, 
+                rgba(222, 221, 221, 0.825) 0%, 
+                rgba(201, 199, 199, 0.5) 70%, 
+                rgba(201, 199, 199, 0.1) 100%);
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    margin-left: 5%;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: #2E5566;
+    font-weight: bold;
+    max-width: 800px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 500px;
+    color: #484747;
+    font-weight: 800px;
+}
+
+/* Seção Quem Somos */
+.who-we-are {
+    background-color: #2b5271;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.who-we-are h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.who-we-are p {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    font-size: 18px;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    flex: 1;
+    min-width: 220px;
+    margin: 0 15px 30px;
+    text-align: center;
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.icon-circle i {
+    font-size: 30px;
+    color: #2b5271;
+}
+
+.service-item h3 {
+    margin-bottom: 10px;
+}
+
+/* Seção de Avaliações */
+.testimonials {
+    padding: 80px 0;
+    text-align: center;
+    background-color: white;
+}
+
+.testimonials h2 {
+    color: #1a4985;
+    font-size: 36px;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.stat-item {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px;
+}
+
+.rating {
+    color: #ffc107;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.google-logo {
+    height: 30px;
+}
+
+.stat-item h3 {
+    font-size: 24px;
+    color: #1a4985;
+}
+
+/* Imagens de Serviços */
+.service-images {
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.image-item {
+    flex: 1 0 20%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.image-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Rodapé */
+footer {
+    background-color: white;
+    padding: 60px 0 20px;
+}
+
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 30px;
+}
+
+.logo-column {
+    flex: 2;
+}
+
+.footer-logo {
+    max-width: 150px;
+    margin-bottom: 15px;
+}
+
+.footer-column h4 {
+    color: #1a4985;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #666;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #1a4985;
+}
+
+.copyright {
+    text-align: center;
+    color: #666;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+/* Formulário de Contato */
+.contact-form-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.contact-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: #1a4985;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    height: 120px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .services-grid {
+        flex-direction: column;
+    }
+    
+    .service-item {
+        margin-bottom: 40px;
+    }
+    
+    nav ul {
+        display: none; /* Neste caso, você precisaria implementar um menu mobile */
+    }
+    
+    .stats-container {
+        flex-direction: column;
+    }
+    
+    .image-grid {
+        flex-wrap: wrap;
+    }
+    
+    .image-item {
+        flex: 1 0 50%;
+    }
+    
+    .footer-columns {
+        flex-direction: column;
+    }
+}
